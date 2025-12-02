@@ -1,26 +1,19 @@
 // Home.tsx
 import React from 'react';
-import Hero from '../components/Hero';
-import About from '../components/About';
-import Projects from '../components/Projects';
-import Contact from '../components/Contact';
+import HeroNew from '../components/HeroNew';
+import AboutNew from '../components/AboutNew';
+import ProjectsNew from '../components/ProjectsNew';
+import Technologies from '../components/Technologies';
+import ContactNew from '../components/ContactNew';
 
 const Home: React.FC = () => {
   return (
     <div className="relative">
-      <Hero />
-
-      {/* Section Divider */}
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-neutral-gray to-transparent my-0" />
-      <About />
-
-      {/* Section Divider */}
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-neutral-gray to-transparent my-0" />
-      <Projects />
-
-      {/* Section Divider */}
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-neutral-gray to-transparent my-0" />
-      <Contact />
+      <HeroNew />
+      <AboutNew />
+      <Technologies />
+      <ProjectsNew />
+      <ContactNew />
     </div>
   );
 };
