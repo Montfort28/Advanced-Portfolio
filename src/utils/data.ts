@@ -100,6 +100,25 @@ export const certifications: ICertification[] = [
   }
 ];
 
+export interface ITechnology {
+  name: string;
+  imagePath: string;
+  color: string;
+}
+
+export const technologies: ITechnology[] = [
+  { name: "React", imagePath: "/images/tech/react.png", color: "#61dafb" },
+  { name: "Next.js", imagePath: "/images/tech/nextjs.png", color: "#000000" },
+  { name: "Vue.js", imagePath: "/images/tech/vue.png", color: "#42b883" },
+  { name: "TypeScript", imagePath: "/images/tech/typescript.png", color: "#3178c6" },
+  { name: "Tailwind CSS", imagePath: "/images/tech/tailwindcss.png", color: "#38bdf8" },
+  { name: "Node.js", imagePath: "/images/tech/nodejs.png", color: "#68a063" },
+  { name: "PostgreSQL", imagePath: "/images/tech/postgres.png", color: "#336791" },
+  { name: "Prisma", imagePath: "/images/tech/prisma.png", color: "#0c344b" },
+  { name: "Figma", imagePath: "/images/tech/figma.png", color: "#f24e1e" },
+  { name: "GitHub", imagePath: "/images/tech/github.png", color: "#181717" },
+];
+
 export const personalInfo = {
   name: "Mugisha Louis Marie De Montfort",
   title: "Fullstack Engineer",
