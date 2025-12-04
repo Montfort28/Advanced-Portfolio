@@ -26,10 +26,10 @@ const HeroNew = () => {
             <div className="space-y-4 animate-fadeInUp">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
                 <span className="block text-white animate-slideInLeft" style={{ animationDelay: '0.1s' }}>I'm Mugisha Montfort.</span>
-                <span className="block bg-gradient-to-r from-clay via-ivory to-clay bg-clip-text text-transparent animate-slideInLeft" style={{ animationDelay: '0.2s' }}>
+                <span className=" text-3xl md:text-4xl lg:text-5xl block bg-gradient-to-r from-clay via-ivory to-clay bg-clip-text text-transparent animate-slideInLeft" style={{ animationDelay: '0.2s' }}>
                   Full-Stack Engineer
                 </span>
-                <span className="block bg-gradient-to-r from-clay via-ivory to-clay bg-clip-text text-transparent animate-slideInLeft" style={{ animationDelay: '0.25s' }}>
+                <span className="text-3xl md:text-4xl lg:text-5xl block bg-gradient-to-r from-clay via-ivory to-clay bg-clip-text text-transparent animate-slideInLeft" style={{ animationDelay: '0.25s' }}>
                   | UI/UX Advocate
                 </span>
               </h1>
