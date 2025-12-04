@@ -94,7 +94,7 @@ const ContactNew: React.FC = () => {
         {/* Section Header */}
         <div className="mb-20 text-center animate-fadeInUp">
           <h2 className="text-5xl md:text-7xl font-black text-white mb-6">
-            Get in Touch
+            Stop Being a Stranger
           </h2>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
             Got a project, an idea, or just want to chat about coffee and code? Let's talk.

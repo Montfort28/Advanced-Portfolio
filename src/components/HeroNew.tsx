@@ -25,12 +25,12 @@ const HeroNew = () => {
             {/* Main Heading */}
             <div className="space-y-4 animate-fadeInUp">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
-                <span className="block text-white animate-slideInLeft" style={{ animationDelay: '0.1s' }}>I'm Montfort.</span>
+                <span className="block text-white animate-slideInLeft" style={{ animationDelay: '0.1s' }}>I'm Mugisha Montfort.</span>
                 <span className="block bg-gradient-to-r from-clay via-ivory to-clay bg-clip-text text-transparent animate-slideInLeft" style={{ animationDelay: '0.2s' }}>
-                  I build things that
+                  Full-Stack Engineer
                 </span>
                 <span className="block bg-gradient-to-r from-clay via-ivory to-clay bg-clip-text text-transparent animate-slideInLeft" style={{ animationDelay: '0.25s' }}>
-                  don't break.
+                  | UI/UX Advocate
                 </span>
               </h1>
             </div>
@@ -38,12 +38,10 @@ const HeroNew = () => {
             {/* Tagline */}
             <div className="space-y-4 animate-fadeInUp" style={{ animationDelay: '0.3s' }}>
               <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-lg">
-                Fullstack engineer. UI/UX focused. <strong className="text-ivory">PostgreSQL & React</strong> obsessed. 
-                <br className="hidden md:block" />
-                Turning caffeine into clean code.
+                obsessed with the entire stack, from organizing chaos in PostgreSQL to crafting pixel-perfect interactions in React. 
               </p>
               <p className="text-sm text-gray-400 italic">
-                Yes — I drink too much coffee. Code responsibly.
+                I debug so you don't have to.
               </p>
             </div>
 
