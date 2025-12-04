@@ -11,9 +11,14 @@ const Footer: React.FC = () => {
             {/* Logo & Brand */}
             <div className="animate-fadeInUp">
               <Link to="/" className="flex items-center group mb-4">
-                <span className="text-2xl font-bold font-display bg-gradient-to-r from-clay via-ivory to-clay bg-clip-text text-transparent group-hover:from-ivory group-hover:via-clay group-hover:to-ivory transition-all">
-                  MM
-                </span>
+                <img
+                  src="/M logo.png"
+                  alt="Logo"
+                  className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
+                  onError={(e) => {
+                    e.currentTarget.src = '/favicon.svg';
+                  }}
+                />
               </Link>
               <p className="text-gray-400 text-sm leading-relaxed">
                 Building clean code and better interfaces. One project at a time.

@@ -89,7 +89,7 @@ const ContactNew: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="relative bg-gradient-to-br from-[#0a0a0a] via-[#1a1a1a] to-[#0f0f0f] py-20 md:py-32">
+    <section id="contact" className="relative bg-gradient-to-br from-[#0a0a0a] via-[#1a1a1a] to-[#0f0f0f] py-20 md:py-32 section-rotate">
       <div className="container mx-auto px-4 max-w-6xl relative z-10">
         {/* Section Header */}
         <div className="mb-20 text-center animate-fadeInUp">

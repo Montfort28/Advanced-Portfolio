@@ -12,7 +12,7 @@ const HeroNew = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0a0a0a] via-[#1a1a1a] to-[#0f0f0f] overflow-hidden pt-32 md:pt-20 lg:pt-0">
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0a0a0a] via-[#1a1a1a] to-[#0f0f0f] overflow-hidden pt-48 md:pt-40 lg:pt-20 section-radial">
       {/* Subtle background grid/gradient */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-gradient-to-b from-clay/5 via-transparent to-transparent"></div>
@@ -84,10 +84,23 @@ const HeroNew = () => {
                 <ContourLines />
               </div>
 
-              {/* Premium profile image container */}
-              <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-3xl overflow-hidden shadow-2xl border-2 border-clay/50 backdrop-blur-sm group-hover:border-clay transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-clay/50">
-                {/* Animated border glow */}
-                <div className="absolute inset-0 rounded-3xl border-2 border-transparent bg-gradient-to-r from-clay/50 to-ivory/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              {/* Premium profile image container with blob border */}
+              <div className="relative w-72 h-72 md:w-80 md:h-80 overflow-hidden shadow-2xl backdrop-blur-sm transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-clay/50 blob-image" style={{
+                borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%',
+                border: '2px solid rgba(201, 123, 86, 0.5)'
+              }}>
+                <style>{`
+                  @keyframes morphBlob {
+                    0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+                    25% { border-radius: 58% 42% 41% 59% / 58% 58% 42% 42%; }
+                    50% { border-radius: 70% 30% 46% 54% / 30% 30% 61% 70%; }
+                    75% { border-radius: 28% 72% 44% 56% / 58% 48% 52% 42%; }
+                  }
+                  .blob-image:hover {
+                    animation: morphBlob 6s ease-in-out infinite;
+                    border-color: rgba(201, 123, 86, 0.8) !important;
+                  }
+                `}</style>
 
                 <img
                   src={personalInfo.profileImage}

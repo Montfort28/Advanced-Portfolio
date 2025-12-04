@@ -397,3 +397,180 @@ html {
 .animate-bounce-arrow {
   animation: bounce-arrow 2s ease-in-out infinite;
 }
+
+/* ===== CREATIVE PAGE TRANSITION ANIMATIONS ===== */
+
+/* Blob morph transition - expanding blob from top */
+@keyframes blobExpandDown {
+  0% {
+    clip-path: circle(0% at 50% 0%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    clip-path: circle(150% at 50% 50%);
+    opacity: 1;
+  }
+}
+
+/* Blob morph transition - contracting blob */
+@keyframes blobContractUp {
+  0% {
+    clip-path: circle(150% at 50% 50%);
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    clip-path: circle(0% at 50% 0%);
+    opacity: 0;
+  }
+}
+
+/* Flowing wave entrance */
+@keyframes waveEnter {
+  0% {
+    opacity: 0;
+    transform: skewY(5deg) translateY(20px);
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+    transform: skewY(0deg) translateY(0);
+  }
+}
+
+/* Smooth morph between sections */
+@keyframes morphTransition {
+  0% {
+    opacity: 0;
+    border-radius: 0%;
+  }
+  50% {
+    opacity: 0.5;
+    border-radius: 50%;
+  }
+  100% {
+    opacity: 1;
+    border-radius: 0%;
+  }
+}
+
+/* Radial reveal - center expanding outward */
+@keyframes radialReveal {
+  0% {
+    clip-path: circle(0% at 50% 50%);
+    opacity: 0;
+  }
+  100% {
+    clip-path: circle(100% at 50% 50%);
+    opacity: 1;
+  }
+}
+
+/* Reverse radial for section exit */
+@keyframes radialConceal {
+  0% {
+    clip-path: circle(100% at 50% 50%);
+    opacity: 1;
+  }
+  100% {
+    clip-path: circle(0% at 50% 50%);
+    opacity: 0;
+  }
+}
+
+/* Flowing particles entrance */
+@keyframes particleFlow {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) translateX(-20px) scale(0);
+  }
+  50% {
+    opacity: 0.6;
+    transform: translateY(10px) translateX(-5px) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) translateX(0) scale(1);
+  }
+}
+
+/* Staggered fade with lift */
+@keyframes staggeredLift {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth scale with rotation */
+@keyframes scaleRotateEnter {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) rotateX(90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotateX(0deg);
+  }
+}
+
+/* Section transition utility classes */
+.section-enter {
+  animation: blobExpandDown 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.section-exit {
+  animation: blobContractUp 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.section-wave {
+  animation: waveEnter 0.9s ease-out forwards;
+}
+
+.section-morph {
+  animation: morphTransition 1s ease-in-out forwards;
+}
+
+.section-radial {
+  animation: radialReveal 0.8s ease-out forwards;
+}
+
+.section-particle {
+  animation: particleFlow 0.8s ease-out forwards;
+}
+
+.section-lift {
+  animation: staggeredLift 0.8s ease-out forwards;
+}
+
+.section-rotate {
+  animation: scaleRotateEnter 0.8s ease-out forwards;
+}
+
+/* Staggered delays for child elements */
+.stagger-1 {
+  animation-delay: 0.1s;
+}
+.stagger-2 {
+  animation-delay: 0.2s;
+}
+.stagger-3 {
+  animation-delay: 0.3s;
+}
+.stagger-4 {
+  animation-delay: 0.4s;
+}
+.stagger-5 {
+  animation-delay: 0.5s;
+}

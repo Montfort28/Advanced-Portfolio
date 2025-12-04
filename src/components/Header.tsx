@@ -42,12 +42,14 @@ const Header: React.FC = () => {
             to="/"
             className="flex items-center group relative flex-shrink-0 pr-2 border-r border-white/10"
           >
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-clay to-clay/50 blur-lg opacity-60 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
-              <span className="relative text-lg font-bold font-display bg-gradient-to-br from-clay via-ivory to-clay bg-clip-text text-transparent group-hover:from-ivory group-hover:via-clay group-hover:to-ivory transition-all duration-300">
-                MM
-              </span>
-            </div>
+            <img
+              src="/M logo.png"
+              alt="Logo"
+              className="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
+              onError={(e) => {
+                e.currentTarget.src = '/favicon.svg';
+              }}
+            />
           </Link>
           {navItems.map((item) => (
             <button
@@ -69,12 +71,14 @@ const Header: React.FC = () => {
           to="/"
           className="flex items-center group relative flex-shrink-0"
         >
-          <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-clay to-clay/50 blur-lg opacity-60 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
-            <span className="relative text-lg font-bold font-display bg-gradient-to-br from-clay via-ivory to-clay bg-clip-text text-transparent group-hover:from-ivory group-hover:via-clay group-hover:to-ivory transition-all duration-300">
-              MM
-            </span>
-          </div>
+          <img
+            src="/M logo.png"
+            alt="Logo"
+            className="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
+            onError={(e) => {
+              e.currentTarget.src = '/favicon.svg';
+            }}
+          />
         </Link>
 
         {/* Hamburger Menu Button */}

@@ -13,7 +13,7 @@ interface Project {
 
 const ProjectsNew: React.FC = () => {
   return (
-    <section id="projects" className="relative bg-gradient-to-br from-[#0a0a0a] via-[#1a1a1a] to-[#0f0f0f] overflow-hidden py-20 md:py-32">
+    <section id="projects" className="relative bg-gradient-to-br from-[#0a0a0a] via-[#1a1a1a] to-[#0f0f0f] overflow-hidden py-20 md:py-32 section-morph">
 
       <div className="container mx-auto px-4 max-w-6xl relative z-10">
         {/* Section Header */}

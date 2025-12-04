@@ -27,7 +27,7 @@ export const projects: IProject[] = [
     title: "Mental Health Platform",
     description: "A fullstack web platform supporting mental health journeys with a visual Mind Garden progress tool. Features secure authentication, real-time data sync, and intuitive UI/UX design.",
     technologies: ["Next.js", "Tailwind CSS", "PostgreSQL", "Node.js", "Prisma"],
-    image: "/Safe_Haven.jfif",
+    image: "/Dhefry Andirezha.jpg",
     githubLink: "https://github.com/Montfort28/Safe-Haven-Platform"
   },
   {
@@ -35,7 +35,7 @@ export const projects: IProject[] = [
     title: "Gaming Info & Discovery Website",
     description: "Built a gaming discovery platform that allows users to search for video games, view release dates, explore detailed descriptions, and read tips or tricks for each title. The interface is clean, responsive, and designed to mimic modern gaming databases.",
     technologies: ["React", "Next.js", "Tailwind CSS", "REST API", "Node.js"],
-    image: "/Gaming_clone.jfif",
+    image: "/Gaming_clone.jpg",
     githubLink: "https://github.com/Montfort28"
   },
   {
@@ -52,7 +52,7 @@ export const projects: IProject[] = [
     title: "BouletteProof - BP Ticket System",
     description: "Enterprise ticketing system with Google OAuth integration, Slack notifications, and ClickUp task automation. Internship project (May - Aug 2024) showcasing production-level development skills.",
     technologies: ["Next.js", "PostgreSQL", "Prisma", "Google OAuth", "Slack API"],
-    image: "/Bouletteproof.png",
+    image: "/Admin Panel_ Your Ticket Management HQ (1).jpg",
     githubLink: "https://github.com/Montfort28"
   }
 ];
