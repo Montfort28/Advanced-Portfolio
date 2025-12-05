@@ -142,6 +142,7 @@ My approach combines modern technologies with attention to detail, ensuring ever
   social: {
     github: "https://github.com/Montfort28",
     linkedin: "https://www.linkedin.com/in/mugisha-montfort-5b9177346/",
+    instagram: "https://www.instagram.com/mont_fort_/",
   },
   resume: "/Mugisha Montfort_RESUME.pdf",
   profileImage: "/Mugisha_Docile.jpg",

@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Header from './components/Header';
 import FooterNew from './components/FooterNew';
+import StickySocialIcons from './components/StickySocialIcons';
+import PageIndicator from './components/PageIndicator';
 import Home from './pages/Home';
 
 const App: React.FC = () => {
@@ -35,6 +37,10 @@ const App: React.FC = () => {
             transition: 'all 0.15s ease-out'
           }}
         />
+        {/* Sticky Social Icons */}
+        <StickySocialIcons />
+        {/* Page Indicator */}
+        <PageIndicator />
         <Header />
         <main className="flex-grow relative z-10 md:pt-0 pt-16">
           <Home />

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,20 +30,19 @@ const Header: React.FC = () => {
 
   return (
     <>
-      {/* Floating Pill Navigation - Hidden on mobile */}
-      <nav className="hidden md:block fixed top-6 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-500">
-        <div className={`flex items-center gap-7 rounded-full backdrop-blur-xl border transition-all duration-500 ${scrolled
-          ? 'px-4 py-3 space-x-2 bg-[#1a1a1a]/95 border-white/10 shadow-2xl'
-          : 'px-6 py-4 space-x-4 bg-[#1a1a1a]/80 border-white/20'
+      {/* Navigation Bar - No borders, logo on left, nav on right */}
+      <nav className="hidden md:block fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+        <div className={`flex items-center justify-between px-12 py-6 backdrop-blur-sm transition-all duration-500 ${scrolled
+          ? 'bg-[#1a1a1a]/90'
+          : 'bg-transparent'
           }`}>
-          {/* Logo in Navbar */}
-          <Link
-            to="/"
-            className="flex items-center group relative flex-shrink-0 pr-2 border-r border-white/10"
-            onClick={(e) => {
-              e.preventDefault();
+          {/* Logo on Left */}
+          <button
+            className="flex items-center group relative flex-shrink-0 bg-transparent border-none cursor-pointer p-0"
+            onClick={() => {
               document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' });
             }}
+            aria-label="Go to home"
           >
             <img
               src="/M logo.png"
@@ -54,30 +52,33 @@ const Header: React.FC = () => {
                 e.currentTarget.src = '/favicon.svg';
               }}
             />
-          </Link>
-          {navItems.map((item) => (
-            <button
-              key={item.id}
-              onClick={() => scrollToSection(item.id)}
-              className="relative px-3 py-2 text-xs font-bold tracking-[0.15em] transition-all duration-300 group overflow-hidden rounded-full text-gray-300 hover:text-white"
-            >
-              <span className="absolute inset-0 bg-gradient-to-r from-clay/0 via-clay/20 to-clay/0 transform translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500 rounded-full"></span>
-              <span className="relative">{item.title}</span>
-            </button>
-          ))}
+          </button>
+
+          {/* Navigation Items on Right */}
+          <div className="flex items-center gap-10">
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className="relative px-4 py-2 text-xs font-bold tracking-[0.15em] transition-all duration-300 group overflow-hidden text-gray-300 hover:text-clay rounded-lg"
+              >
+                <span className="absolute inset-0 bg-gradient-to-r from-clay/0 via-clay/20 to-clay/0 transform translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-500 rounded-lg"></span>
+                <span className="relative">{item.title}</span>
+              </button>
+            ))}
+          </div>
         </div>
       </nav>
 
       {/* Mobile Header - Logo and Hamburger */}
       <div className="md:hidden fixed top-0 left-0 right-0 h-16 bg-gradient-to-r from-[#0a0a0a] via-[#1a1a1a] to-[#0f0f0f] border-b border-white/10 z-50 flex items-center justify-between px-4 backdrop-blur-md">
         {/* Logo */}
-        <Link
-          to="/"
-          className="flex items-center group relative flex-shrink-0"
-          onClick={(e) => {
-            e.preventDefault();
+        <button
+          className="flex items-center group relative flex-shrink-0 bg-transparent border-none cursor-pointer p-0"
+          onClick={() => {
             document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' });
           }}
+          aria-label="Go to home"
         >
           <img
             src="/M logo.png"
@@ -87,7 +88,7 @@ const Header: React.FC = () => {
               e.currentTarget.src = '/favicon.svg';
             }}
           />
-        </Link>
+        </button>
 
         {/* Hamburger Menu Button */}
         <button
