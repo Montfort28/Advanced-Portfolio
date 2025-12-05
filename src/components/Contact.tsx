@@ -109,7 +109,15 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="relative bg-gradient-to-br from-[#0a0a0a] via-[#1a1a1a] to-[#0f0f0f] overflow-hidden">
+    <section id="contact" className="relative py-20 md:py-32 bg-gradient-to-br from-[#0a0a0a] via-[#1a1a1a] to-[#0f0f0f] overflow-hidden section-radial">
+      {/* Subtle background grid/gradient */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 bg-gradient-to-b from-clay/5 via-transparent to-transparent"></div>
+      </div>
+
+      {/* Decorative top transition line */}
+      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-transparent via-clay to-transparent"></div>
+
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -left-40 w-80 h-80 rounded-full bg-gradient-to-r from-clay/20 to-transparent blur-3xl animate-breathe" style={{ animationDelay: '0s' }}></div>
@@ -330,6 +338,9 @@ const Contact: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* Decorative bottom transition line */}
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-transparent via-clay to-transparent"></div>
     </section>
   );
 };

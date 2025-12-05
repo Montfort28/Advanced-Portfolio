@@ -41,11 +41,15 @@ const Header: React.FC = () => {
           <Link
             to="/"
             className="flex items-center group relative flex-shrink-0 pr-2 border-r border-white/10"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' });
+            }}
           >
             <img
               src="/M logo.png"
               alt="Logo"
-              className="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
+              className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
               onError={(e) => {
                 e.currentTarget.src = '/favicon.svg';
               }}
@@ -70,11 +74,15 @@ const Header: React.FC = () => {
         <Link
           to="/"
           className="flex items-center group relative flex-shrink-0"
+          onClick={(e) => {
+            e.preventDefault();
+            document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' });
+          }}
         >
           <img
             src="/M logo.png"
             alt="Logo"
-            className="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
+            className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
             onError={(e) => {
               e.currentTarget.src = '/favicon.svg';
             }}

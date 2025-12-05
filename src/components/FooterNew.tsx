@@ -10,11 +10,18 @@ const Footer: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
             {/* Logo & Brand */}
             <div className="animate-fadeInUp">
-              <Link to="/" className="flex items-center group mb-4">
+              <Link 
+                to="/" 
+                className="flex items-center group mb-4"
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 <img
                   src="/M logo.png"
                   alt="Logo"
-                  className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
+                  className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
                   onError={(e) => {
                     e.currentTarget.src = '/favicon.svg';
                   }}

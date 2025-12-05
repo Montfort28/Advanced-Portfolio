@@ -181,7 +181,7 @@ const AboutNew: React.FC = () => {
             Who I Am
           </h2>
           <p className="text-gray-300 text-sm md:text-base lg:text-lg max-w-4xl mx-auto leading-relaxed px-2">
-            Fullstack developer with strong frontend experience in <strong className="text-ivory">Next.js & Tailwind CSS</strong>. Passionate about creating beautiful, intuitive user experiences while building scalable backend systems. I specialize in API integrations including Slack notifications, ClickUp automation, and OAuth implementations. With hands-on experience in Agile environments, I excel at code reviews, collaborative development, and maintaining clean code architecture. My approach combines modern technologies with attention to detail, ensuring every project is both performant and visually stunning. (Spoiler alert: I Promise I’m More Interesting Than This Section.)
+            Fullstack developer with strong frontend experience in <strong className="text-ivory">Next.js & Tailwind CSS</strong>. Passionate about creating beautiful, intuitive user experiences while building scalable backend systems. I specialize in API integrations including Slack notifications, ClickUp automation, and OAuth implementations. With hands-on experience in Agile environments, I excel at code reviews, collaborative development, and maintaining clean code architecture. My approach combines modern technologies with attention to detail, ensuring every project is both performant and visually stunning. ( I Promise I’m More Interesting Than This Section.)
           </p>
         </div>
 
@@ -227,7 +227,7 @@ const AboutNew: React.FC = () => {
                   }}
                 >
                   <img
-                    src="/Mugisha_Montfort_Profile.jpeg"
+                    src="/Mugisha_Montfort_Profile.jpg"
                     alt={personalInfo.name}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     onError={(e) => {

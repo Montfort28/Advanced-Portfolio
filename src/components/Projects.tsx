@@ -27,7 +27,15 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <section id="projects" className="relative bg-gradient-to-br from-[#0a0a0a] via-[#1a1a1a] to-[#0f0f0f] overflow-hidden">
+    <section id="projects" className="relative py-20 md:py-32 bg-gradient-to-br from-[#0a0a0a] via-[#1a1a1a] to-[#0f0f0f] overflow-hidden section-radial">
+      {/* Subtle background grid/gradient */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 bg-gradient-to-b from-clay/5 via-transparent to-transparent"></div>
+      </div>
+
+      {/* Decorative top transition line */}
+      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-transparent via-clay to-transparent"></div>
+
       {/* Background decorative elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-0 right-1/4 w-96 h-96 rounded-full bg-gradient-to-l from-clay/10 to-transparent blur-3xl animate-breathe" style={{ animationDelay: '0s' }}></div>
@@ -67,6 +75,9 @@ const Projects: React.FC = () => {
             </motion.div>
           ))}
         </motion.div>
+
+        {/* Decorative bottom transition line */}
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-transparent via-clay to-transparent"></div>
 
         {/* CTA Section */}
         <div className="text-center mt-16">

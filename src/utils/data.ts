@@ -144,7 +144,7 @@ My approach combines modern technologies with attention to detail, ensuring ever
     linkedin: "https://www.linkedin.com/in/mugisha-montfort-5b9177346/",
   },
   resume: "/Mugisha Montfort_RESUME.pdf",
-  profileImage: "/Mugisha_Docile.jpeg",
+  profileImage: "/Mugisha_Docile.jpg",
   references: [
     {
       name: "Mr. MUNYENTWARI Clement",
