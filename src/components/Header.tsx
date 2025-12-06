@@ -38,7 +38,7 @@ const Header: React.FC = () => {
           }`}>
           {/* Logo on Left */}
           <button
-            className="flex items-center group relative flex-shrink-0 bg-transparent border-none cursor-pointer p-0"
+            className="flex items-center group relative flex-shrink-0 bg-transparent border-none cursor-pointer p-0 mb-4"
             onClick={() => {
               document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' });
             }}

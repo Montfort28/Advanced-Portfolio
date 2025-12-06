@@ -14,15 +14,24 @@ const PageIndicator: React.FC = () => {
         { id: 'contact', page: 4 },
       ];
 
-      const scrollPosition = window.scrollY + window.innerHeight / 2;
+      const scrollPosition = window.scrollY + window.innerHeight / 3;
 
-      for (let i = sections.length - 1; i >= 0; i--) {
+      // Find the section closest to the current scroll position
+      let closestSection = sections[0];
+      let closestDistance = Math.abs(scrollPosition - (document.getElementById(sections[0].id)?.offsetTop || 0));
+
+      for (let i = 1; i < sections.length; i++) {
         const section = document.getElementById(sections[i].id);
-        if (section && section.offsetTop <= scrollPosition) {
-          setCurrentPage(sections[i].page);
-          break;
+        if (section) {
+          const distance = Math.abs(scrollPosition - section.offsetTop);
+          if (distance < closestDistance) {
+            closestDistance = distance;
+            closestSection = sections[i];
+          }
         }
       }
+
+      setCurrentPage(closestSection.page);
     };
 
     // Small delay to ensure DOM is fully loaded before checking scroll position

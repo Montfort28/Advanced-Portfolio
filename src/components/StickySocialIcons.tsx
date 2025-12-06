@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa6';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+
 
 const StickySocialIcons: React.FC = () => {
   return (
@@ -32,19 +33,7 @@ const StickySocialIcons: React.FC = () => {
         >
           <FaLinkedin size={24} />
         </a>
-
-        {/* Instagram Icon */}
-        <a
-          href="https://www.instagram.com/mont_fort_/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Instagram"
-          className="text-gray-400 hover:text-pink-500 hover:scale-125 transition-all duration-300"
-          title="Instagram"
-        >
-          <FaInstagram size={24} />
-        </a>
-
+        
         {/* Email Icon */}
         <a
           href="mailto:mugishamontfort28@gmail.com"

@@ -176,8 +176,8 @@ const AboutNew: React.FC = () => {
 
       <div className="container mx-auto px-4 max-w-7xl relative z-10">
         {/* Centered About Heading */}
-        <div className="text-center mb-6 md:mb-8 animate-fadeInUp">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4 md:mb-6">
+        <div className="text-center mb-4 md:mb-8 animate-fadeInUp">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-3 md:mb-6">
             Who I Am
           </h2>
           <p className="text-gray-300 text-sm md:text-base lg:text-lg max-w-4xl mx-auto leading-relaxed px-2">
@@ -186,8 +186,8 @@ const AboutNew: React.FC = () => {
         </div>
 
         {/* Specialty Cards Surrounding Image */}
-        <div className="mb-12 md:mb-16">
-          <div className="relative max-w-5xl mx-auto flex justify-center items-center" style={{ minHeight: '500px' }}>
+        <div className="mb-8 md:mb-12 lg:mb-16">
+          <div className="relative max-w-5xl mx-auto flex justify-center items-center" style={{ minHeight: '400px' }}>
             {/* Top Card */}
             <div className="absolute -top-10 md:-top-12 left-1/2 transform -translate-x-1/2 w-32 md:w-40 animate-slideInUp opacity-0" style={{ animationDelay: '0.1s', animation: 'slideInUp 0.8s ease-out 0.1s forwards' }}>
               <div className="specialty-card p-4 md:p-6 rounded-2xl md:rounded-3xl text-center h-32 md:h-40 flex flex-col items-center justify-center">
@@ -309,7 +309,7 @@ const AboutNew: React.FC = () => {
         </div>
 
         {/* Timeline Tabs with Animations */}
-        <div className="max-w-4xl mx-auto mt-16">
+        <div className="max-w-4xl mx-auto mt-8 md:mt-12 lg:mt-16">
           {/* Tab Navigation - Styled Side Tabs */}
           <div className="mb-16 flex justify-center gap-4 flex-wrap animate-fadeInUp">
             {[
