@@ -6,6 +6,7 @@ import FooterNew from './components/FooterNew';
 import StickySocialIcons from './components/StickySocialIcons';
 import PageIndicator from './components/PageIndicator';
 import Home from './pages/Home';
+import AnimatedBackground from './components/AnimatedBackground';
 
 const App: React.FC = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -27,6 +28,7 @@ const App: React.FC = () => {
   return (
     <Router>
       <div className="flex flex-col min-h-screen bg-beige text-espresso relative">
+        <AnimatedBackground />
         {/* Cursor glow effect */}
         <div
           className="pointer-events-none fixed w-96 h-96 rounded-full opacity-20 blur-3xl mix-blend-screen z-40"

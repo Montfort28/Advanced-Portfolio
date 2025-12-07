@@ -187,7 +187,7 @@ const AboutNew: React.FC = () => {
 
         {/* Specialty Cards Surrounding Image */}
         <div className="mb-8 md:mb-12 lg:mb-16">
-          <div className="relative max-w-5xl mx-auto flex justify-center items-center" style={{ minHeight: '400px' }}>
+          <div className="relative max-w-6xl mx-auto flex justify-center" style={{ minHeight: '500px' }}>
             {/* Top Card */}
             <div className="absolute -top-10 md:-top-12 left-1/2 transform -translate-x-1/2 w-32 md:w-40 animate-slideInUp opacity-0" style={{ animationDelay: '0.1s', animation: 'slideInUp 0.8s ease-out 0.1s forwards' }}>
               <div className="specialty-card p-4 md:p-6 rounded-2xl md:rounded-3xl text-center h-32 md:h-40 flex flex-col items-center justify-center">
@@ -312,6 +312,7 @@ const AboutNew: React.FC = () => {
         <div className="max-w-4xl mx-auto mt-8 md:mt-12 lg:mt-16">
           {/* Tab Navigation - Styled Side Tabs */}
           <div className="mb-16 flex justify-center gap-4 flex-wrap animate-fadeInUp">
+            {/* Responsive horizontal icons for tabs */}
             {[
               { id: 'experience' as TimelineTab, label: 'Experience', icon: 'M20 6h-2.18c-.4-1.16-1.64-2-3.82-2-2.4 0-2.72 1.64-4 4.86V6h-5v14h5v-8c0-1.25.756-4 2.863-4 1.236 0 2.5.5 2.5 2v8h5V8.5c0-3.064-2.3-2.5-3.363-2.5z' },
               { id: 'education' as TimelineTab, label: 'Education', icon: 'M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82m7-6.36L5 6.56v4.31L12 15l7-4.13V6.56l-7 4.26' },
@@ -320,16 +321,17 @@ const AboutNew: React.FC = () => {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center gap-2 px-6 py-3 rounded-lg font-bold transition-all duration-300 transform hover:scale-105 ${
+                className={`flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 px-3 sm:px-6 py-2 sm:py-3 rounded-lg font-bold transition-all duration-300 transform hover:scale-105 ${
                   activeTab === tab.id
                     ? 'bg-clay text-white shadow-lg shadow-clay/50'
                     : 'bg-white/5 border border-white/10 text-gray-300 hover:border-clay hover:text-clay'
                 }`}
+                style={{ minWidth: '48px', minHeight: '48px' }}
               >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-7 h-7 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d={tab.icon} />
                 </svg>
-                {tab.label}
+                <span className="hidden sm:inline">{tab.label}</span>
               </button>
             ))}
           </div>

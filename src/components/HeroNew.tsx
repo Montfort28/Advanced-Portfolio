@@ -12,20 +12,21 @@ const HeroNew = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0a0a0a] via-[#1a1a1a] to-[#0f0f0f] overflow-hidden pt-32 md:pt-40 lg:pt-20 section-radial">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0a0a0a] via-[#1a1a1a] to-[#0f0f0f] overflow-hidden pt-8 md:pt-40 lg:pt-20 section-radial">
       {/* Subtle background grid/gradient */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-gradient-to-b from-clay/5 via-transparent to-transparent"></div>
       </div>
 
       <div className="container mx-auto px-4 z-10 max-w-6xl">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-6 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-2 items-center">
           {/* Left: Main Content */}
           <div className="space-y-6 lg:space-y-8">
             {/* Main Heading */}
             <div className="space-y-4 animate-fadeInUp">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
                 <span className="block text-white animate-slideInLeft" style={{ animationDelay: '0.1s' }}>I'm Mugisha Montfort.</span>
+                {/* Hide Full-Stack Engineer label on small screens */}
                 <span className="hidden md:block text-3xl md:text-4xl lg:text-5xl bg-gradient-to-r from-clay via-ivory to-clay bg-clip-text text-transparent animate-slideInLeft" style={{ animationDelay: '0.2s' }}>
                   Full-Stack Engineer
                 </span>
@@ -68,8 +69,8 @@ const HeroNew = () => {
 
           </div>
 
-          {/* Right Image */}
-          <div className="hidden lg:flex flex-col items-center animate-slideInRight opacity-0" style={{ animationDelay: '0.4s', animation: 'slideInRight 0.8s ease-out 0.4s forwards' }}>
+          {/* Right Image - visible on all screens, but layout changes for mobile */}
+          <div className="flex flex-col items-center animate-slideInRight opacity-0 lg:opacity-100 lg:flex lg:animate-slideInRight" style={{ animationDelay: '0.4s', animation: 'slideInRight 0.8s ease-out 0.4s forwards' }}>
             <div className="relative group">
               {/* Animated gradient orbs background */}
               <div className="absolute -inset-8 bg-gradient-to-r from-clay/20 via-transparent to-ivory/20 rounded-3xl blur-2xl opacity-60 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>

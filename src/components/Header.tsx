@@ -32,27 +32,30 @@ const Header: React.FC = () => {
     <>
       {/* Navigation Bar - No borders, logo on left, nav on right */}
       <nav className="hidden md:block fixed top-0 left-0 right-0 z-50 transition-all duration-500">
-        <div className={`flex items-center justify-between px-12 py-6 backdrop-blur-sm transition-all duration-500 ${scrolled
+        <div className={`flex items-center justify-between px-4 md:px-8 py-6 backdrop-blur-sm transition-all duration-500 ${scrolled
           ? 'bg-[#1a1a1a]/90'
           : 'bg-transparent'
           }`}>
-          {/* Logo on Left */}
-          <button
-            className="flex items-center group relative flex-shrink-0 bg-transparent border-none cursor-pointer p-0 mb-4"
-            onClick={() => {
-              document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' });
-            }}
-            aria-label="Go to home"
-          >
-            <img
-              src="/M logo.png"
-              alt="Logo"
-              className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
-              onError={(e) => {
-                e.currentTarget.src = '/favicon.svg';
+          {/* Logo on Left - moved further left */}
+          <div className="flex items-center" style={{ minWidth: '60px' }}>
+            <button
+              className="flex items-center group relative flex-shrink-0 bg-transparent border-none cursor-pointer p-0"
+              onClick={() => {
+                document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' });
               }}
-            />
-          </button>
+              aria-label="Go to home"
+              style={{ marginLeft: '0px' }}
+            >
+              <img
+                src="/M logo.png"
+                alt="Logo"
+                className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
+                onError={(e) => {
+                  e.currentTarget.src = '/favicon.svg';
+                }}
+              />
+            </button>
+          </div>
 
           {/* Navigation Items on Right */}
           <div className="flex items-center gap-10">
