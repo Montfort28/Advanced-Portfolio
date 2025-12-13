@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaEnvelope, FaXTwitter } from 'react-icons/fa6';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 
 const StickySocialIcons: React.FC = () => {
@@ -32,18 +32,6 @@ const StickySocialIcons: React.FC = () => {
           title="LinkedIn"
         >
           <FaLinkedin size={24} />
-        </a>
-
-        {/* Twitter Icon */}
-        <a
-          href="https://x.com/MugishaMontfort"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Twitter"
-          className="text-gray-400 hover:text-blue-400 hover:scale-125 transition-all duration-300"
-          title="Twitter"
-        >
-          <FaXTwitter size={24} />
         </a>
 
         {/* Email Icon */}
